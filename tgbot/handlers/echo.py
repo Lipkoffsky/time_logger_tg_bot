@@ -7,7 +7,8 @@ async def bot_echo(message: types.Message):
     text = [
         "Эхо без состояния.",
         "Сообщение:",
-        message.text
+        message.text,
+        str(message.from_user.id)
     ]
 
     await message.answer('\n'.join(text))
